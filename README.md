@@ -1,24 +1,17 @@
 # AGV Embedded Control
 
-Embedded C++ firmware for an autonomous guided vehicle (AGV) implementing sensor-based navigation and control logic.
+Embedded firmware for an autonomous guided vehicle system with separate controllers for motion control and obstacle detection.
 
-## Features
-- Ultrasonic sensor-based obstacle detection
-- Motor control using relay interface
-- State-based obstacle handling logic
-- Non-blocking timing using millis()
-- Audible feedback using buzzer
+## System Architecture
+- **Main controller**: handles AGV movement and line-following logic
+- **Obstacle detection controller**: Arduino Uno-based ultrasonic sensing and stop/resume control
 
-## Hardware
-- ATmega2560
-- Ultrasonic sensors (HC-SR04)
-- Relay module
-- Buzzer
+## Components
+- Main AGV controller firmware
+- Ultrasonic obstacle detection firmware
+- Relay-based stop control
+- Buzzer feedback
 
-## Software
-- PlatformIO (Arduino framework)
-- C++
-
-## Project Structure
-- `src/main.cpp` – Main firmware
-- `platformio.ini` – Project configuration
+## Repository Structure
+- `main-controller/` - primary AGV firmware
+- `obstacle-detection-uno/` - ultrasonic sensor and safety logic firmware
