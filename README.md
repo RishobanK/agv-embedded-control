@@ -42,7 +42,6 @@ IR Sensor Array → Main Controller → Motor Driver → Motors
 
 Ultrasonic Sensors → Safety Controller → Relay Stop Control
                                        └→ Buzzer Alert
-
 ```
 
 ---
