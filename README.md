@@ -49,6 +49,7 @@ Ultrasonic Sensors → Safety Controller → Relay Stop Control
 
 ## 🧩 Firmware Structure
 
+```text
 agv-embedded-control/
 ├── src/
 │   ├── main_controller.cpp        # AGV navigation & motor control
@@ -57,7 +58,7 @@ agv-embedded-control/
 │   └── BeeLineSensorPro/          # Line sensor library
 ├── platformio.ini                 # Multi-target build configuration
 └── README.md
-
+```
 ---
 
 ## ⚙️ PlatformIO Configuration
