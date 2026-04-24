@@ -35,25 +35,28 @@ This separation ensures **better reliability, modularity, and safety** in real-t
 
 ## 🧠 System Architecture
 
-IR Sensor Array → Main Controller → Motor Driver → Motors  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Push Buttons  
+```text
+IR Sensor Array → Main Controller → Motor Driver → Motors
+                         ↑
+                 Push Buttons
 
-Ultrasonic Sensors → Safety Controller → Relay Stop Control  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└→ Buzzer Alert
+Ultrasonic Sensors → Safety Controller → Relay Stop Control
+                                       └→ Buzzer Alert
+
+```
 
 ---
 
 ## 🧩 Firmware Structure
 
-agv-embedded-control/  
-├── src/  
-│   ├── main_controller.cpp — AGV navigation & motor control  
-│   └── obstacle_detection_uno.cpp — Ultrasonic safety controller  
-├── lib/  
-│   └── BeeLineSensorPro/ — Line sensor library  
-├── platformio.ini — Multi-target build configuration  
-└── README.md  
+agv-embedded-control/
+├── src/
+│   ├── main_controller.cpp        # AGV navigation & motor control
+│   └── obstacle_detection_uno.cpp # Ultrasonic safety controller
+├── lib/
+│   └── BeeLineSensorPro/          # Line sensor library
+├── platformio.ini                 # Multi-target build configuration
+└── README.md
 
 ---
 
